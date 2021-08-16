@@ -1,0 +1,98 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #19a2ae;
+    --accent: hsl(229, 23%, 23%);
+    --accent-light: hsl(227, 10%, 46%);
+    --neutral: hsl(0, 0%, 59%);
+}
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary);
+    background-image: url(./images/bg-pattern-top.svg), 
+    url(images/bg-pattern-bottom.svg);
+    background-position: right 45vw bottom 42vh, 45vw 40vh;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+main {
+    width: min(90vw, 275px);
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+}
+.card__picture {
+    border-radius: 3em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card__header {
+    background-image: url('./images/bg-pattern-card.svg');
+    height: 120px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+
+}
+
+.card__body {
+    background-color: white;
+    height: 200px;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.card__title {
+    text-align: center;
+    padding-top: 4em;
+}
+
+.card__stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin solid hsl(0, 0%, 89%);;
+}
+
+.smaller--text {
+    font-size: 12px;
+    color: var(--neutral);
+}
+
+.card__name, .card__stat {
+    font-weight: 700;
+    font-size: smaller;
+    color: var(--accent);
+}
+
+.card__city {
+    margin-top: 1em;
+}
+
+.card__concept {
+    margin-top: 0.5em;
+}
